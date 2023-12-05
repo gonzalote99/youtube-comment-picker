@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css">
+
+
+  <title>youtube comment picker</title>
+</head>
+<body class="bg-dark position-relative">
+  <section class="min-vh-100 d-flex align-items-center justify-content-center w-100">
+    <div class="container">
+       <div class="row justify-content-center align-items-center">
+        <div class="col-md-10 background-link">
+         <label for="linkInput" class="form-label text-white">enter video link</label>
+         <input type="text" class="bg-secondary text-white form-control" id="linkInput" placeholder="example: https://www.youtube.com/watch?v=l0eM1_JVqHE" />
+         <div class="row align-items-center justify-content-between mt-3 text-center g-3">
+        <div class="col-md-6 text-md-start">
+          <h5 class="text-muted"><span id="CommentCount">0</span> comments</h5>
+        </div>
+        <div class="col-md-6 text-md-end">
+         <button id="pickWinner" class="btn btn-primary">pick winner</button>
+         <button id="anotherPick" class="d-none btn btn-success">pick another winner</button>
+        </div>
+
+         </div>
+
+        </div>
+       </div>
+       <div class="row justify-content-center align-items-center mt-5">
+         <div id="Enter" class="col-md-10 py-5 background-link">
+          <h5 class="text-white text-center">nothing valid center</h5>
+         </div>
+       </div>
+    </div>
+  </section>
+
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11;">
+   <div id="wrongLink" class="toast" class="rounded-top" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <i class="bi bi-x-square-fill text-danger"></i>
+    <strong class="me-auto ms-2" >incorrect</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body text-white bg-danger">
+  link incorrect!
+  </div>
+   </div>
+  </div>
+  
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11;">
+    <div id="correctLink" class="toast" class="rounded-top" role="alert" aria-live="assertive" aria-atomic="true">
+   <div class="toast-header">
+     <i class="bi bi-x-square-fill text-success"></i>
+     <strong class="me-auto ms-2" >correct</strong>
+     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+   </div>
+   <div class="toast-body text-white bg-success">
+   link correct!
+   </div>
+    </div>
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+   <script src="script.js"></script>
+</body>
+</html>
